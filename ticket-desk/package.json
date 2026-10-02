@@ -1,0 +1,30 @@
+{
+  "name": "ticket-desk",
+  "version": "1.0.0",
+  "description": "Ticket Desk - CAPM demo",
+  "main": "srv/server.js",
+  "scripts": {
+    "start": "cds watch"
+  },
+  "dependencies": {
+    "@cap-js/sqlite": "^3.1.1",
+    "@sap/cds": "^10.1.1",
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "jsonwebtoken": "^9.0.3"
+  },
+  "devDependencies": {
+    "@sap/cds-dk": "^10.1.1"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "database": "db.sqlite"
+        }
+      },
+      "auth": "mocked"
+    }
+  }
+}
